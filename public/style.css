@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+/* ===============================================
+   CSS Variables
+   =============================================== */
+:root {
+  /* Colors */
+  --accent: #6a98f8;
+  --danger: #e63959;
+  --gray-light: #f3f5f7;
+  --text-secondary: #8e949f;
+  --text-primary: #2c323a;
+
+  /* Border */
+  --border: 2px solid var(--gray-light);
+  --border-radius: 8px;
+
+  /* Spacing */
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+}
+
+/* ===============================================
+   Reset & Base Styles
+   =============================================== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Google Sans", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  padding: var(--spacing-sm);
+  min-height: 100vh;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* ===============================================
+   Typography and Icons
+   =============================================== */
+p,
+h1,
+h2,
+a {
+  color: var(--text-primary);
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+i {
+  font-size: 1.1rem;
+}
+
+.secondary {
+  color: var(--text-secondary);
+}
+
+.inline-link {
+  color: var(--accent);
+}
+
+label {
+  font-weight: 600;
+}
+
+/* ===============================================
+   Links & Buttons Base
+   =============================================== */
+a,
+button {
+  transition: all 0.2s;
+}
+
+a:hover,
+i:hover {
+  color: var(--accent);
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* a.title {
+  color: var(--accent);
+  font-weight: 600;
+} */
+
+/* ===============================================
+   Layout Sections
+   =============================================== */
+main,
+article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* ===============================================
+   Header & Navigation
+   =============================================== */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: var(--border);
+}
+
+header .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: var(--accent);
+  /* border-bottom: 2px solid var(--text-secondary); */
+}
+
+/* ===============================================
+   Footer
+   =============================================== */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: var(--spacing-sm);
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* ===============================================
+   Blog Posts
+   =============================================== */
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: var(--spacing-sm);
+  border-left: 5px solid var(--accent);
+  padding-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: var(--border);
+}
+
+/* ===============================================
+   Forms & Inputs
+   =============================================== */
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+input,
+textarea {
+  border: 2px solid #ccc;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  border: 2px solid var(--accent);
+}
+
+/* Buttons */
+
+button {
+  border: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.btn-default {
+  background-color: var(--accent);
+}
+
+.btn-danger {
+  background-color: transparent;
+  padding: 0;
+  color: var(--danger);
+}
+
+@media (max-width: 480px) {
+  header .content {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  footer {
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+}

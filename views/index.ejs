@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+  <body>
+    <%- include("./partials/nav") %>
+    <main class="posts">
+      <h2>All Posts</h2>
+        <% if (posts.length > 0) { %>
+          <%posts.forEach(post => { %>
+            <a href="/post/<%= post._id %>">
+              <div class="blog-post">
+                <h3><%= post.title %></h3>
+                <p class="secondary"><%= post.preview %></p>
+                <p class="secondary"><%= post.createdAt %></p>
+              </div>
+            </a>
+          
+        <% }) %>
+        <% } else { %>
+          <p class="secondary">No Posts to Display</p>
+        <% } %>
+     
+
+        </main>
+        <%- include("./partials/footer") %>
+  </body>
+</html>
