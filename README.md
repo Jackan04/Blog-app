@@ -2,6 +2,15 @@
 
 Full-stack blog application built with Node.js, Express and MongoDB. Users can create, read, edit, and delete blog posts.
 
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack & Tools](#tech-stack--tools)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+
 ## Features
 
 - Create and publish blog posts
@@ -60,3 +69,11 @@ Before you begin, you'll need a MongoDB database:
 - `views/` - EJS templates
 - `services/` - Database connection
 - `public/` - Static assets
+
+
+## Screenshots
+
+![Blog Home](public/images/image-1.png)
+![Create Post](public/images/image-3.png)
+![Edit Post](public/images/image-4.png)
+![Blog Post](public/images/image-2.png)
