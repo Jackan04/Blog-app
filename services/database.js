@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
+const PORT = process.env.PORT || 3000;
 
 export default class Database {
   app;
@@ -15,7 +16,7 @@ export default class Database {
     try {
       await mongoose.connect(this.uri);
       console.log("Connected to MongoDB");
-      this.app.listen(3000);
+      this.app.listen(PORT);
     } catch (error) {
       console.error("MongoDB connection error:", error);
     }

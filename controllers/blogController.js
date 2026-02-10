@@ -11,6 +11,10 @@ async function blog_index(req, res) {
   }
 }
 
+async function helloWorld() {
+  
+}
+
 async function blog_about(req, res) {
   res.render("about", { title: "About" });
 }
